@@ -20,4 +20,9 @@ do (win = window, doc = window.document, $ = jQuery) ->
             googleCalendarApiKey: 'AIzaSyDVHMUYJFyihgpcPgokrqvHPxcr6UVYJmg'
             events:
                 googleCalendarId: 'nnam8h2jscsp5nesgnulc7t2hg@group.calendar.google.com'
+                
+            eventClick: (event) ->
+                url = event.description.split('::')[0]
+                window.open(url)
+                false
         })

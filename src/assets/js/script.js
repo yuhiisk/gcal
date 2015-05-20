@@ -24,6 +24,12 @@
       googleCalendarApiKey: 'AIzaSyDVHMUYJFyihgpcPgokrqvHPxcr6UVYJmg',
       events: {
         googleCalendarId: 'nnam8h2jscsp5nesgnulc7t2hg@group.calendar.google.com'
+      },
+      eventClick: function(event) {
+        var url;
+        url = event.description.split('::')[0];
+        window.open(url);
+        return false;
       }
     });
   });
